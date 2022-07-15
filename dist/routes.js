@@ -21,13 +21,16 @@ exports.default = (app) => {
         const userData = yield (0, controller_1.GetUser)(req.body.id);
         res.status(200).send(userData);
     }));
+    app.get("/*", (req, res) => {
+        res.redirect('/404');
+    });
     app.post("/api/user", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const user = yield (0, controller_1.CreateUser)({
             email: req.body.email,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
         });
-        res.status(200).send({ user });
+        res.status(201).send({ user });
     }));
     app.patch("/api/user", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const id = req.body.id;
@@ -45,7 +48,7 @@ exports.default = (app) => {
         res.status(200).send(user);
     }));
     app.delete("/api/user", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-        const response = yield (0, controller_1.DeleteUser)(req.body.id);
-        res.status(200).send(response);
+        yield (0, controller_1.DeleteUser)(req.body.id);
+        res.status(204);
     }));
 };

@@ -31,7 +31,5 @@ export const UpdateUser = async (id: ID, update: Object) => {
 
 export const DeleteUser = async (id: ID) => {
     await UserModel.findByIdAndDelete(id).exec();
-
-    return `Deleted user: ${id}`
 };
 

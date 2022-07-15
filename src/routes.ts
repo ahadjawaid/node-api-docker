@@ -17,6 +17,10 @@ export default  (app: Application) => {
         res.status(200).send(userData);
     });
 
+    app.get("/*", (req: Request, res: Response) => {
+        res.redirect('/404');
+    });
+
     app.post("/api/user", async (req: Request, res: Response) => {
         const user = await CreateUser({
             email: req.body.email,
@@ -24,7 +28,7 @@ export default  (app: Application) => {
             lastName: req.body.lastName,
         });
 
-        res.status(200).send({ user });
+        res.status(201).send({ user });
     });
 
     app.patch("/api/user", async (req: Request, res: Response) => {
@@ -49,8 +53,8 @@ export default  (app: Application) => {
     });
 
     app.delete("/api/user", async (req: Request, res: Response) => {
-        const response: String = await DeleteUser(req.body.id);
+        await DeleteUser(req.body.id);
 
-        res.status(200).send(response);
+        res.status(204);
     });
 }

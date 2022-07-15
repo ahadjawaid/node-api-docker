@@ -37,6 +37,5 @@ const UpdateUser = (id, update) => __awaiter(void 0, void 0, void 0, function* (
 exports.UpdateUser = UpdateUser;
 const DeleteUser = (id) => __awaiter(void 0, void 0, void 0, function* () {
     yield models_1.default.findByIdAndDelete(id).exec();
-    return `Deleted user: ${id}`;
 });
 exports.DeleteUser = DeleteUser;
