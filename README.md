@@ -9,10 +9,10 @@ A RESTful api server locally using Docker and MongoDB and written in TypeScript
 
 |**Rest API** call          | **CRUD** operation | REST endpoints| **Body**|
 |:----:                 |:----:           |:----:|      :----:|
-|**GET** {with body}   | **R**ead        | `http://localhost:4005/` <br /> `http://localhost:4005/api/todos`| `{ id: string }` |
-|**PATCH**  {with body}   | **U**pdate     | `http://localhost:4005/api/todos/`| `{ id: string,  optional: (email: string, firstName: string, lastName: string) }` |
-|**POST** {with body}   | **C**reate      | `http://localhost:4005/api/todos`| `{ email: string, firstName: string, lastName: string }` |
-|**DELETE**  {with body}   | **D**elete      | `http://localhost:4005/api/todos/`| `{ id: string }` |
+|**GET** {with body}   | **R**ead        | `http://localhost:4005/api/user` <br /> `http://localhost:4005/api/todos`| `{ id: string }` |
+|**PATCH**  {with body}   | **U**pdate     | `http://localhost:4005/api/user/`| `{ id: string,  optional: (email: string, firstName: string, lastName: string) }` |
+|**POST** {with body}   | **C**reate      | `http://localhost:4005/api/user`| `{ email: string, firstName: string, lastName: string }` |
+|**DELETE**  {with body}   | **D**elete      | `http://localhost:4005/api/user/`| `{ id: string }` |
 
  - Response codes:
  
