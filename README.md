@@ -2,7 +2,7 @@
 
 It is a working project
 
-A RESTful api server locally using docker and MongoDB
+A RESTful api server locally using Docker and MongoDB and written in TypeScript
 
 - It 🏃runs a server (docker) using nodejs [v16]
 - Exposes following RESTFUL endpoints with all CRUD operations perisited through MongoDB
