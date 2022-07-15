@@ -1,11 +1,12 @@
 # api-server-docker
 
 It is a working project
-For getting started with a RESTFUL api server locally using docker
+
+A RESTful api server locally using docker and MongoDB
 
 - It 🏃runs a server (docker) using nodejs [v16]
-- Exposes following RESTFUL endpoints with all CRUD operations using a MongoDB database
-  
+- Exposes following RESTFUL endpoints with all CRUD operations perisited through MongoDB
+
 |**Rest API** call          | **CRUD** operation | REST endpoints| **Body**|
 |:----:                 |:----:           |:----:|      :----:|
 |**GET** {with body}   | **R**ead        | `http://localhost:4005/` <br /> `http://localhost:4005/api/todos`| `{ id: string }` |
